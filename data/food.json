@@ -1,0 +1,77 @@
+{
+  "category": "Food",
+  "items": [
+    {
+      "name": "Grilled Chicken Rice Bowl",
+      "price": 12.99,
+      "section": "Ready-to-Eat Meals",
+      "tags": ["chicken", "rice"]
+    },
+    {
+      "name": "Spaghetti Carbonara",
+      "price": 13.50,
+      "section": "Ready-to-Eat Meals",
+      "tags": ["pasta", "italian"]
+    },
+    {
+      "name": "Thai Red Curry",
+      "price": 14.99,
+      "section": "Ready-to-Eat Meals",
+      "tags": ["spicy", "thai"]
+    },
+    {
+      "name": "Pad Thai",
+      "price": 13.49,
+      "section": "Ready-to-Eat Meals",
+      "tags": ["thai", "noodles"]
+    },
+    {
+      "name": "Buffalo Chicken Wings",
+      "price": 10.99,
+      "section": "Snacks",
+      "tags": ["spicy", "chicken"]
+    },
+    {
+      "name": "Mozzarella Sticks",
+      "price": 8.99,
+      "section": "Snacks",
+      "tags": ["cheese"]
+    },
+    {
+      "name": "Garlic Bread with Cheese",
+      "price": 5.99,
+      "section": "Snacks",
+      "tags": ["bread", "cheese"]
+    },
+    {
+      "name": "Loaded Nachos Supreme",
+      "price": 10.99,
+      "section": "Snacks",
+      "tags": ["cheese", "mexican"]
+    },
+    {
+      "name": "Chocolate Lava Cake",
+      "price": 7.99,
+      "section": "Desserts",
+      "tags": ["chocolate"]
+    },
+    {
+      "name": "New York Cheesecake",
+      "price": 8.99,
+      "section": "Desserts",
+      "tags": ["cake"]
+    },
+    {
+      "name": "Tiramisu",
+      "price": 7.49,
+      "section": "Desserts",
+      "tags": ["coffee"]
+    },
+    {
+      "name": "Glazed Donuts",
+      "price": 8.99,
+      "section": "Desserts",
+      "tags": ["donut"]
+    }
+  ]
+}
