@@ -41,24 +41,58 @@
             </div>
 
             <div class="dashboard-section">
-                <h2>🛍️ Your Orders</h2>
-                <div id="cartItems" class="cart-items">
-                    <p class="empty-cart">No items in cart. <a href="index.html">Browse categories</a></p>
+                <h2>� Payment Method</h2>
+                <div class="payment-selector">
+                    <div class="payment-option">
+                        <input type="radio" id="online" name="payment" value="online" onchange="updatePaymentMethod()">
+                        <label for="online">💻 Online Payment</label>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" id="delivery" name="payment" value="delivery" onchange="updatePaymentMethod()">
+                        <label for="delivery">🚚 Pay on Delivery</label>
+                    </div>
+                </div>
+                <p id="selectedPayment" class="payment-display">No payment method selected</p>
+            </div>
+
+            <div class="dashboard-section">
+                <h2>📦 Your Orders by Category</h2>
+                <div class="order-table-wrapper">
+                    <table class="order-table">
+                        <thead>
+                            <tr>
+                                <th>Category</th>
+                                <th>Product Name</th>
+                                <th>Unit Price</th>
+                                <th>Quantity</th>
+                                <th>Total</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody id="orderTableBody">
+                            <tr class="empty-row">
+                                <td colspan="6" style="text-align: center; padding: 2rem;">No items ordered yet. <a href="index.html">Browse categories</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
 
             <div class="dashboard-summary">
-                <div class="summary-row">
-                    <span>Subtotal:</span>
-                    <span id="subtotal">$0.00</span>
-                </div>
-                <div class="summary-row">
-                    <span>Service Charge (GST 7%):</span>
-                    <span id="gst">$0.00</span>
-                </div>
-                <div class="summary-row total">
-                    <span>Total Cost:</span>
-                    <span id="total">$0.00</span>
+                <div class="summary-section">
+                    <h3>Price Breakdown</h3>
+                    <div class="summary-row">
+                        <span>Subtotal:</span>
+                        <span id="subtotal">$0.00</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Service Charge (GST 7%):</span>
+                        <span id="gst">$0.00</span>
+                    </div>
+                    <div class="summary-row total">
+                        <span>Total Cost:</span>
+                        <span id="total">$0.00</span>
+                    </div>
                 </div>
             </div>
 
