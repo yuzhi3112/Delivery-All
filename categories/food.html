@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food - QuickDeliver</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">🚚 QuickDeliver</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="categories-dropdown">
+                    <span>Categories ▼</span>
+                    <div class="dropdown-content">
+                        <a href="food.html" class="active">🍔 Food</a>
+                        <a href="beverage.html">🥤 Beverage</a>
+                        <a href="medicine.html">💊 Medicine</a>
+                        <a href="grocery.html">🛒 Grocery</a>
+                    </div>
+                </li>
+                <li><a href="../dashboard.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="category-page-container">
+        <div class="category-header">
+            <h1>🍔 Food Delivery</h1>
+            <p>Fresh meals, snacks, and prepared dishes from your favorite restaurants</p>
+        </div>
+
+        <section class="products-section">
+            <h2>Ready-to-Eat Meals</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Grilled Chicken Meal</h3>
+                    <p>Juicy grilled chicken with rice and vegetables</p>
+                    <p class="price">$12.50</p>
+                    <button class="add-btn" onclick="addToCart('Grilled Chicken Meal', 12.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Pasta Carbonara</h3>
+                    <p>Creamy Italian pasta with bacon and cheese</p>
+                    <p class="price">$14.00</p>
+                    <button class="add-btn" onclick="addToCart('Pasta Carbonara', 14.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Beef Burger Combo</h3>
+                    <p>Delicious beef burger with fries and drink</p>
+                    <p class="price">$11.00</p>
+                    <button class="add-btn" onclick="addToCart('Beef Burger Combo', 11.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Pad Thai</h3>
+                    <p>Stir-fried noodles with shrimp and vegetables</p>
+                    <p class="price">$13.50</p>
+                    <button class="add-btn" onclick="addToCart('Pad Thai', 13.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Snacks & Appetizers</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Crispy Fried Chicken</h3>
+                    <p>Golden fried chicken pieces - box of 6</p>
+                    <p class="price">$8.00</p>
+                    <button class="add-btn" onclick="addToCart('Crispy Fried Chicken', 8.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Spring Rolls (6 pieces)</h3>
+                    <p>Crispy spring rolls with sweet and spicy sauce</p>
+                    <p class="price">$7.50</p>
+                    <button class="add-btn" onclick="addToCart('Spring Rolls', 7.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Dumplings (10 pieces)</h3>
+                    <p>Steamed or fried dumplings with dipping sauce</p>
+                    <p class="price">$8.50</p>
+                    <button class="add-btn" onclick="addToCart('Dumplings', 8.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Satay Skewers (5)</h3>
+                    <p>Grilled meat skewers with peanut sauce</p>
+                    <p class="price">$9.00</p>
+                    <button class="add-btn" onclick="addToCart('Satay Skewers', 9.00)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Desserts</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Chocolate Cake Slice</h3>
+                    <p>Rich chocolate cake with frosting</p>
+                    <p class="price">$5.50</p>
+                    <button class="add-btn" onclick="addToCart('Chocolate Cake Slice', 5.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Cheesecake</h3>
+                    <p>Creamy New York style cheesecake</p>
+                    <p class="price">$6.00</p>
+                    <button class="add-btn" onclick="addToCart('Cheesecake', 6.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Ice Cream Sundae</h3>
+                    <p>Vanilla ice cream with toppings and syrup</p>
+                    <p class="price">$5.00</p>
+                    <button class="add-btn" onclick="addToCart('Ice Cream Sundae', 5.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Tiramisu</h3>
+                    <p>Italian classic coffee-flavored dessert</p>
+                    <p class="price">$6.50</p>
+                    <button class="add-btn" onclick="addToCart('Tiramisu', 6.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 QuickDeliver. Fast delivery across Singapore | All rights reserved</p>
+    </footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>

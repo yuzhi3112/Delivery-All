@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Order Summary</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">🚚 QuickDeliver</h1>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li class="categories-dropdown">
+                    <span>Categories ▼</span>
+                    <div class="dropdown-content">
+                        <a href="categories/food.html">🍔 Food</a>
+                        <a href="categories/beverage.html">🥤 Beverage</a>
+                        <a href="categories/medicine.html">💊 Medicine</a>
+                        <a href="categories/grocery.html">🛒 Grocery</a>
+                    </div>
+                </li>
+                <li><a href="dashboard.html" class="active">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="dashboard-container">
+        <div class="dashboard-wrapper">
+            <h1>Order Summary</h1>
+            
+            <div class="dashboard-section">
+                <h2>📍 Delivery Location</h2>
+                <div class="location-selector">
+                    <select id="locationSelect" onchange="updateLocation()">
+                        <option value="">Select Location</option>
+                        <option value="east">🏘️ East Singapore</option>
+                        <option value="west">🏘️ West Singapore</option>
+                        <option value="south">🏘️ South Singapore</option>
+                        <option value="north">🏘️ North Singapore</option>
+                        <option value="central">🏘️ Central Singapore</option>
+                    </select>
+                    <p id="selectedLocation" class="location-display">No location selected</p>
+                </div>
+            </div>
+
+            <div class="dashboard-section">
+                <h2>🛍️ Your Orders</h2>
+                <div id="cartItems" class="cart-items">
+                    <p class="empty-cart">No items in cart. <a href="index.html">Browse categories</a></p>
+                </div>
+            </div>
+
+            <div class="dashboard-summary">
+                <div class="summary-row">
+                    <span>Subtotal:</span>
+                    <span id="subtotal">$0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Service Charge (GST 7%):</span>
+                    <span id="gst">$0.00</span>
+                </div>
+                <div class="summary-row total">
+                    <span>Total Cost:</span>
+                    <span id="total">$0.00</span>
+                </div>
+            </div>
+
+            <div class="dashboard-actions">
+                <button class="btn btn-secondary" onclick="clearCart()">Clear Cart</button>
+                <button class="btn btn-primary" id="checkoutBtn" onclick="checkout()" disabled>Proceed to Checkout</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 QuickDeliver. Fast delivery across Singapore | All rights reserved</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>

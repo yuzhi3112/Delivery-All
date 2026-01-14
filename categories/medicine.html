@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicine - QuickDeliver</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <h1 class="logo">🚚 QuickDeliver</h1>
+            <ul class="nav-links">
+                <li><a href="../index.html">Home</a></li>
+                <li class="categories-dropdown">
+                    <span>Categories ▼</span>
+                    <div class="dropdown-content">
+                        <a href="food.html">🍔 Food</a>
+                        <a href="beverage.html">🥤 Beverage</a>
+                        <a href="medicine.html" class="active">💊 Medicine</a>
+                        <a href="grocery.html">🛒 Grocery</a>
+                    </div>
+                </li>
+                <li><a href="../dashboard.html">Dashboard</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="category-page-container">
+        <div class="category-header">
+            <h1>💊 Medicine & Health</h1>
+            <p>Pharmacy items and health supplements delivered safely to your doorstep</p>
+        </div>
+
+        <section class="products-section">
+            <h2>Pain Relief & Fever</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Paracetamol 500mg</h3>
+                    <p><strong>Uses:</strong> Relieves mild to moderate pain, fever, and headaches</p>
+                    <p><strong>Application:</strong> Take 1-2 tablets every 4-6 hours. Maximum 8 tablets per day</p>
+                    <p class="price">$4.50</p>
+                    <button class="add-btn" onclick="addToCart('Paracetamol 500mg', 4.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Ibuprofen 200mg</h3>
+                    <p><strong>Uses:</strong> Anti-inflammatory, pain relief, and fever reduction</p>
+                    <p><strong>Application:</strong> Take 1-2 tablets every 6-8 hours with food. Maximum 6 tablets per day</p>
+                    <p class="price">$5.00</p>
+                    <button class="add-btn" onclick="addToCart('Ibuprofen 200mg', 5.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Aspirin 325mg</h3>
+                    <p><strong>Uses:</strong> Pain relief, fever reduction, and cardiovascular protection</p>
+                    <p><strong>Application:</strong> Take 1-2 tablets every 4-6 hours. Maximum 12 tablets per day</p>
+                    <p class="price">$3.50</p>
+                    <button class="add-btn" onclick="addToCart('Aspirin 325mg', 3.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Diclofenac 50mg</h3>
+                    <p><strong>Uses:</strong> Strong anti-inflammatory for acute pain and joint pain</p>
+                    <p><strong>Application:</strong> Take 1 tablet 2-3 times daily with meals. Maximum 3 tablets per day</p>
+                    <p class="price">$6.50</p>
+                    <button class="add-btn" onclick="addToCart('Diclofenac 50mg', 6.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Cold & Cough Relief</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Cough Syrup (100ml)</h3>
+                    <p><strong>Uses:</strong> Relieves dry and wet cough, soothes throat irritation</p>
+                    <p><strong>Application:</strong> Take 5-10ml (1-2 teaspoons) 3-4 times daily. Adults and children above 6 years</p>
+                    <p class="price">$5.50</p>
+                    <button class="add-btn" onclick="addToCart('Cough Syrup', 5.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Throat Lozenges (Pack of 20)</h3>
+                    <p><strong>Uses:</strong> Soothe sore throat, reduce cough, freshen breath</p>
+                    <p><strong>Application:</strong> Dissolve 1 lozenge in mouth every 2-3 hours. Maximum 6 lozenges per day</p>
+                    <p class="price">$4.00</p>
+                    <button class="add-btn" onclick="addToCart('Throat Lozenges', 4.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Decongestant Tablets</h3>
+                    <p><strong>Uses:</strong> Relieves nasal congestion and sinus pressure</p>
+                    <p><strong>Application:</strong> Take 1 tablet every 4-6 hours. Maximum 4 tablets per day. Not for children under 12</p>
+                    <p class="price">$5.00</p>
+                    <button class="add-btn" onclick="addToCart('Decongestant Tablets', 5.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Antihistamine Tablets</h3>
+                    <p><strong>Uses:</strong> Relieves allergy symptoms, sneezing, and runny nose</p>
+                    <p><strong>Application:</strong> Take 1 tablet every 4-6 hours. Maximum 4 tablets per day</p>
+                    <p class="price">$4.50</p>
+                    <button class="add-btn" onclick="addToCart('Antihistamine Tablets', 4.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Digestive & Stomach Health</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Antacid Tablets (Pack of 20)</h3>
+                    <p><strong>Uses:</strong> Relieves heartburn, indigestion, and acid reflux</p>
+                    <p><strong>Application:</strong> Chew 1-2 tablets as needed. Maximum 7 tablets per day</p>
+                    <p class="price">$4.00</p>
+                    <button class="add-btn" onclick="addToCart('Antacid Tablets', 4.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Loperamide 2mg (Anti-Diarrhea)</h3>
+                    <p><strong>Uses:</strong> Controls diarrhea and reduces intestinal spasms</p>
+                    <p><strong>Application:</strong> Take 1 capsule after first loose stool, then 1 after each stool. Maximum 8 capsules per day</p>
+                    <p class="price">$5.50</p>
+                    <button class="add-btn" onclick="addToCart('Loperamide 2mg', 5.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Probiotic Capsules (Pack of 30)</h3>
+                    <p><strong>Uses:</strong> Restores healthy gut bacteria, improves digestion</p>
+                    <p><strong>Application:</strong> Take 1 capsule daily with food. Best taken in the morning</p>
+                    <p class="price">$12.00</p>
+                    <button class="add-btn" onclick="addToCart('Probiotic Capsules', 12.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Omeprazole 20mg</h3>
+                    <p><strong>Uses:</strong> Reduces stomach acid, treats acid reflux and ulcers</p>
+                    <p><strong>Application:</strong> Take 1 capsule 30 minutes before breakfast. Typically used for 2-4 weeks</p>
+                    <p class="price">$8.00</p>
+                    <button class="add-btn" onclick="addToCart('Omeprazole 20mg', 8.00)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Skin Care & Topicals</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Hydrocortisone Cream 1% (30g)</h3>
+                    <p><strong>Uses:</strong> Reduces inflammation, itching, and redness from skin conditions</p>
+                    <p><strong>Application:</strong> Apply thin layer to affected area 2-3 times daily. Do not use for more than 7 days without consulting doctor</p>
+                    <p class="price">$6.00</p>
+                    <button class="add-btn" onclick="addToCart('Hydrocortisone Cream', 6.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Antibiotic Ointment (20g)</h3>
+                    <p><strong>Uses:</strong> Prevents infection in minor cuts, scrapes, and wounds</p>
+                    <p><strong>Application:</strong> Clean wound first, apply thin layer 1-3 times daily. Cover with bandage if needed</p>
+                    <p class="price">$4.50</p>
+                    <button class="add-btn" onclick="addToCart('Antibiotic Ointment', 4.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Antifungal Cream (15g)</h3>
+                    <p><strong>Uses:</strong> Treats fungal infections like athlete's foot and ringworm</p>
+                    <p><strong>Application:</strong> Apply to affected area twice daily for 2-4 weeks. Clean and dry area first</p>
+                    <p class="price">$7.00</p>
+                    <button class="add-btn" onclick="addToCart('Antifungal Cream', 7.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Moisturizing Lotion (200ml)</h3>
+                    <p><strong>Uses:</strong> Hydrates dry skin, soothes irritation and sensitivity</p>
+                    <p><strong>Application:</strong> Apply to clean skin as needed, 1-2 times daily. Suitable for all skin types</p>
+                    <p class="price">$8.50</p>
+                    <button class="add-btn" onclick="addToCart('Moisturizing Lotion', 8.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>Vitamins & Supplements</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Vitamin C 500mg (Pack of 30)</h3>
+                    <p><strong>Uses:</strong> Boosts immune system, prevents colds, supports collagen production</p>
+                    <p><strong>Application:</strong> Take 1 tablet daily with food, preferably after breakfast</p>
+                    <p class="price">$6.50</p>
+                    <button class="add-btn" onclick="addToCart('Vitamin C 500mg', 6.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Vitamin D3 1000IU (Pack of 60)</h3>
+                    <p><strong>Uses:</strong> Supports bone health, immune function, and calcium absorption</p>
+                    <p><strong>Application:</strong> Take 1 tablet daily with a meal containing fat for better absorption</p>
+                    <p class="price">$9.00</p>
+                    <button class="add-btn" onclick="addToCart('Vitamin D3 1000IU', 9.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Multivitamin Tablets (Pack of 30)</h3>
+                    <p><strong>Uses:</strong> Provides essential vitamins and minerals for daily health and energy</p>
+                    <p><strong>Application:</strong> Take 1 tablet daily with breakfast. Suitable for adults and children above 12</p>
+                    <p class="price">$10.00</p>
+                    <button class="add-btn" onclick="addToCart('Multivitamin Tablets', 10.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Iron Supplement 25mg (Pack of 30)</h3>
+                    <p><strong>Uses:</strong> Prevents and treats anemia, improves energy levels and oxygen transport</p>
+                    <p><strong>Application:</strong> Take 1 tablet daily with orange juice (vitamin C aids absorption). Take on empty stomach if tolerated</p>
+                    <p class="price">$7.50</p>
+                    <button class="add-btn" onclick="addToCart('Iron Supplement 25mg', 7.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <h2>First Aid & Wellness</h2>
+            <div class="products-grid">
+                <div class="product-item">
+                    <h3>Sterile Bandages (Pack of 50)</h3>
+                    <p><strong>Uses:</strong> Covers and protects minor wounds and cuts</p>
+                    <p><strong>Application:</strong> Clean wound, apply antiseptic if needed, then apply bandage. Change daily or if soiled</p>
+                    <p class="price">$3.50</p>
+                    <button class="add-btn" onclick="addToCart('Sterile Bandages', 3.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Antiseptic Solution (100ml)</h3>
+                    <p><strong>Uses:</strong> Disinfects wounds and prevents infection</p>
+                    <p><strong>Application:</strong> Apply to wound with cotton ball or clean cloth. Use 2-3 times daily until healed</p>
+                    <p class="price">$4.00</p>
+                    <button class="add-btn" onclick="addToCart('Antiseptic Solution', 4.00)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Elastic Bandage Wrap (5cm)</h3>
+                    <p><strong>Uses:</strong> Provides support and compression for sprains and strains</p>
+                    <p><strong>Application:</strong> Wrap around affected area firmly but not too tight. Ensure good circulation</p>
+                    <p class="price">$5.50</p>
+                    <button class="add-btn" onclick="addToCart('Elastic Bandage Wrap', 5.50)">Add to Cart</button>
+                </div>
+                <div class="product-item">
+                    <h3>Thermometer (Digital)</h3>
+                    <p><strong>Uses:</strong> Accurately measures body temperature for fever detection</p>
+                    <p><strong>Application:</strong> Place under tongue for 30 seconds or use as armpit/ear thermometer. Fast reading in 10 seconds</p>
+                    <p class="price">$12.50</p>
+                    <button class="add-btn" onclick="addToCart('Thermometer Digital', 12.50)">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 QuickDeliver. Fast delivery across Singapore | All rights reserved</p>
+    </footer>
+
+    <script src="../app.js"></script>
+</body>
+</html>
