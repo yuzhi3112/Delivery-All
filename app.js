@@ -2,24 +2,112 @@
 let cart = [];
 let selectedLocation = null;
 let selectedPayment = null;
+let currentModalItem = { name: '', price: 0 };
 
-// Add to cart
-function addToCart(itemName, price) {
+// Open Add to Cart Modal
+function openAddToCartModal(itemName, price) {
+    currentModalItem = { name: itemName, price: price };
+    const modal = document.getElementById('addToCartModal');
+    const modalDetails = document.getElementById('modalItemDetails');
+    const quantityInput = document.getElementById('quantityInput');
+    
+    // Reset quantity to 1
+    quantityInput.value = 1;
+    
+    // Display item details
+    modalDetails.innerHTML = `
+        <div class="modal-item-info">
+            <p><strong>Item:</strong> ${itemName}</p>
+            <p><strong>Price per unit:</strong> $${price.toFixed(2)}</p>
+        </div>
+    `;
+    
+    // Show modal
+    modal.style.display = 'block';
+    updateModalPrice();
+}
+
+// Close Add to Cart Modal
+function closeAddToCartModal() {
+    const modal = document.getElementById('addToCartModal');
+    modal.style.display = 'none';
+}
+
+// Update Modal Price Display
+function updateModalPrice() {
+    const quantityInput = document.getElementById('quantityInput');
+    const quantity = parseInt(quantityInput.value) || 1;
+    const totalPrice = currentModalItem.price * quantity;
+    const modalPriceEl = document.getElementById('modalItemPrice');
+    modalPriceEl.innerHTML = `
+        <div class="price-summary">
+            <p>Total: <strong>$${totalPrice.toFixed(2)}</strong> (${quantity} × $${currentModalItem.price.toFixed(2)})</p>
+        </div>
+    `;
+}
+
+// Increase Modal Quantity
+function increaseModalQuantity() {
+    const quantityInput = document.getElementById('quantityInput');
+    quantityInput.value = (parseInt(quantityInput.value) || 1) + 1;
+    updateModalPrice();
+}
+
+// Decrease Modal Quantity
+function decreaseModalQuantity() {
+    const quantityInput = document.getElementById('quantityInput');
+    const currentValue = parseInt(quantityInput.value) || 1;
+    if (currentValue > 1) {
+        quantityInput.value = currentValue - 1;
+    } else {
+        quantityInput.value = 1;
+    }
+    updateModalPrice();
+}
+
+// Validate Quantity Input
+function validateQuantity() {
+    const quantityInput = document.getElementById('quantityInput');
+    let value = parseInt(quantityInput.value);
+    
+    if (isNaN(value) || value < 1) {
+        quantityInput.value = 1;
+    }
+    updateModalPrice();
+}
+
+// Confirm Add to Cart from Modal
+function confirmAddToCart() {
+    const quantityInput = document.getElementById('quantityInput');
+    const quantity = parseInt(quantityInput.value) || 1;
+    
+    addToCartWithQuantity(currentModalItem.name, currentModalItem.price, quantity);
+    closeAddToCartModal();
+}
+
+// Add to cart with specific quantity
+function addToCartWithQuantity(itemName, price, quantity) {
     const existingItem = cart.find(item => item.name === itemName);
     
     if (existingItem) {
-        existingItem.quantity++;
+        existingItem.quantity += quantity;
     } else {
         cart.push({
             name: itemName,
             price: price,
-            quantity: 1,
+            quantity: quantity,
             category: getItemCategory(itemName)
         });
     }
     
-    alert(`${itemName} added to cart!`);
+    // Show confirmation alert
+    alert(`✓ ${quantity}x ${itemName} added to cart!`);
     updateCart();
+}
+
+// Add to cart (legacy function, now used by addToCartWithQuantity)
+function addToCart(itemName, price) {
+    addToCartWithQuantity(itemName, price, 1);
 }
 
 // Get category based on item name
@@ -243,5 +331,15 @@ window.addEventListener('DOMContentLoaded', function() {
     // Initialize cart display if on dashboard page
     if (document.getElementById('orderTableBody')) {
         updateCart();
+    }
+    
+    // Modal click-outside-to-close functionality
+    const modal = document.getElementById('addToCartModal');
+    if (modal) {
+        window.addEventListener('click', function(event) {
+            if (event.target === modal) {
+                closeAddToCartModal();
+            }
+        });
     }
 });

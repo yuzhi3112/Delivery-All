@@ -21,6 +21,28 @@
         </div>
     </nav>
 
+    <!-- Add to Cart Modal -->
+    <div id="addToCartModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeAddToCartModal()">&times;</span>
+            <h2>Add to Cart</h2>
+            <div id="modalItemDetails"></div>
+            <div class="quantity-selector">
+                <label for="quantityInput">Quantity:</label>
+                <div class="quantity-input-group">
+                    <button class="qty-btn" onclick="decreaseModalQuantity()">-</button>
+                    <input type="number" id="quantityInput" min="1" value="1" onchange="validateQuantity()">
+                    <button class="qty-btn" onclick="increaseModalQuantity()">+</button>
+                </div>
+            </div>
+            <div id="modalItemPrice" class="modal-price"></div>
+            <div class="modal-actions">
+                <button class="btn btn-cancel" onclick="closeAddToCartModal()">Cancel</button>
+                <button class="btn btn-primary" id="confirmAddBtn" onclick="confirmAddToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
     <div class="category-page-container">
         <div class="category-header">
             <h1>🍔 Food Delivery</h1>
@@ -35,7 +57,7 @@
                     <h3>Grilled Chicken Rice Bowl</h3>
                     <p>Tender grilled chicken breast with steamed rice and fresh vegetables</p>
                     <p class="price">$12.99</p>
-                    <button class="add-btn" onclick="addToCart('Grilled Chicken Rice Bowl', 12.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Grilled Chicken Rice Bowl', 12.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -43,7 +65,7 @@
                     <h3>Spaghetti Carbonara</h3>
                     <p>Creamy Italian pasta with bacon, eggs, and parmesan cheese</p>
                     <p class="price">$13.50</p>
-                    <button class="add-btn" onclick="addToCart('Spaghetti Carbonara', 13.50)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Spaghetti Carbonara', 13.50)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -51,7 +73,7 @@
                     <h3>Thai Red Curry</h3>
                     <p>Spicy red curry with chicken, bell peppers, and jasmine rice</p>
                     <p class="price">$14.99</p>
-                    <button class="add-btn" onclick="addToCart('Thai Red Curry', 14.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Thai Red Curry', 14.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -59,7 +81,7 @@
                     <h3>Pad Thai</h3>
                     <p>Stir-fried rice noodles with shrimp, chicken, peanuts, and lime</p>
                     <p class="price">$13.49</p>
-                    <button class="add-btn" onclick="addToCart('Pad Thai', 13.49)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Pad Thai', 13.49)">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -72,7 +94,7 @@
                     <h3>Buffalo Chicken Wings</h3>
                     <p>10 pieces of crispy wings tossed in spicy buffalo sauce with blue cheese dip</p>
                     <p class="price">$10.99</p>
-                    <button class="add-btn" onclick="addToCart('Buffalo Chicken Wings', 10.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Buffalo Chicken Wings', 10.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -80,7 +102,7 @@
                     <h3>Mozzarella Sticks</h3>
                     <p>8 pieces of breaded mozzarella with marinara sauce</p>
                     <p class="price">$8.99</p>
-                    <button class="add-btn" onclick="addToCart('Mozzarella Sticks', 8.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Mozzarella Sticks', 8.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -88,7 +110,7 @@
                     <h3>Garlic Bread with Cheese</h3>
                     <p>Toasted bread brushed with garlic butter and melted mozzarella</p>
                     <p class="price">$5.99</p>
-                    <button class="add-btn" onclick="addToCart('Garlic Bread with Cheese', 5.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Garlic Bread with Cheese', 5.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -96,7 +118,7 @@
                     <h3>Loaded Nachos Supreme</h3>
                     <p>Crispy chips topped with cheese, jalapeños, sour cream, and guacamole</p>
                     <p class="price">$10.99</p>
-                    <button class="add-btn" onclick="addToCart('Loaded Nachos Supreme', 10.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Loaded Nachos Supreme', 10.99)">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -109,7 +131,7 @@
                     <h3>Chocolate Lava Cake</h3>
                     <p>Warm chocolate cake with a molten center, served with vanilla ice cream</p>
                     <p class="price">$7.99</p>
-                    <button class="add-btn" onclick="addToCart('Chocolate Lava Cake', 7.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Chocolate Lava Cake', 7.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -117,7 +139,7 @@
                     <h3>New York Cheesecake</h3>
                     <p>Creamy cheesecake with graham cracker crust and berry topping</p>
                     <p class="price">$8.99</p>
-                    <button class="add-btn" onclick="addToCart('New York Cheesecake', 8.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('New York Cheesecake', 8.99)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -125,7 +147,7 @@
                     <h3>Tiramisu</h3>
                     <p>Italian dessert with layers of mascarpone, espresso, and cocoa powder</p>
                     <p class="price">$7.49</p>
-                    <button class="add-btn" onclick="addToCart('Tiramisu', 7.49)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Tiramisu', 7.49)">Add to Cart</button>
                 </div>
 
                 <div class="product-item">
@@ -133,7 +155,7 @@
                     <h3>Glazed Donuts</h3>
                     <p>Box of 6 assorted glazed and filled donuts</p>
                     <p class="price">$8.99</p>
-                    <button class="add-btn" onclick="addToCart('Glazed Donuts', 8.99)">Add to Cart</button>
+                    <button class="add-btn" onclick="openAddToCartModal('Glazed Donuts', 8.99)">Add to Cart</button>
                 </div>
             </div>
         </section>
@@ -144,5 +166,13 @@
     </footer>
 
     <script src="../app.js"></script>
+
+    <script type="module">
+        import Chatbot from "https://cdn.jsdelivr.net/npm/flowise-embed/dist/web.js"
+        Chatbot.init({
+            chatflowid: "245869bf-a845-4ff2-b6a6-eb447149864b",
+            apiHost: "https://cloud.flowiseai.com",
+        })
+    </script>
 </body>
 </html>

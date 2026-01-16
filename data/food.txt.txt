@@ -1,0 +1,12 @@
+ID=1 | ITEM=Grilled Chicken Rice Bowl | PRICE=12.99 | SECTION=Ready-to-Eat Meals | TAGS=chicken,rice
+ID=2 | ITEM=Spaghetti Carbonara | PRICE=13.50 | SECTION=Ready-to-Eat Meals | TAGS=pasta,italian
+ID=3 | ITEM=Thai Red Curry | PRICE=14.99 | SECTION=Ready-to-Eat Meals | TAGS=spicy,thai
+ID=4 | ITEM=Pad Thai | PRICE=13.49 | SECTION=Ready-to-Eat Meals | TAGS=thai,noodles
+ID=5 | ITEM=Buffalo Chicken Wings | PRICE=10.99 | SECTION=Snacks | TAGS=spicy,chicken
+ID=6 | ITEM=Mozzarella Sticks | PRICE=8.99 | SECTION=Snacks | TAGS=cheese
+ID=7 | ITEM=Garlic Bread with Cheese | PRICE=5.99 | SECTION=Snacks | TAGS=bread,cheese
+ID=8 | ITEM=Loaded Nachos Supreme | PRICE=10.99 | SECTION=Snacks | TAGS=cheese,mexican
+ID=9 | ITEM=Chocolate Lava Cake | PRICE=7.99 | SECTION=Desserts | TAGS=chocolate
+ID=10 | ITEM=New York Cheesecake | PRICE=8.99 | SECTION=Desserts | TAGS=cake
+ID=11 | ITEM=Tiramisu | PRICE=7.49 | SECTION=Desserts | TAGS=coffee
+ID=12 | ITEM=Glazed Donuts | PRICE=8.99 | SECTION=Desserts | TAGS=donut
