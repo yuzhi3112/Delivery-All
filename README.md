@@ -1,4 +1,4 @@
-# QuickDeliver - Generic Delivery Platform
+# DeliveryItAll - Generic Delivery Platform
 
 A comprehensive multi-category delivery platform for Food, Beverages, Medicine, and Grocery items across Singapore.
 
@@ -168,7 +168,7 @@ Each product includes:
 
 ## License
 
-© 2026 QuickDeliver. All rights reserved.
+© 2026 DeliveryItAll. All rights reserved.
 
 ## Contact
 
